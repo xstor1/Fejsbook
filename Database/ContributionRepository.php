@@ -35,6 +35,12 @@ class ContributionRepository {
                     ':id' => $id
         ]);
     }
+        function getContributionbyIDProfile($id) {
+        $sql = 'SELECT * FROM tbContributions WHERE IDProfile = :id';
+        return $this->db->selectAll($sql, [
+                    ':id' => $id
+        ]);
+    }
     function deleteContribution($id)
     {
         $sql="DELETE FROM tbContribution WHERE ID= :id";

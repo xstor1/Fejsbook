@@ -9,7 +9,7 @@ class ProfileRepository {
     }
 
     function getProfiles() {
-        $sql = 'SELECT * '
+        $sql = 'SELECT ID,Name,Surname,ProfilePhoto,Email,BornDate,Sex,Admin '
                 . 'FROM tbProfiles ';
                 
         return $this->db->selectAll($sql);

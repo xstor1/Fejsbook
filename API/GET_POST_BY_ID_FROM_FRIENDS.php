@@ -19,6 +19,10 @@ if (isset($_POST['id']) && is_numeric($_POST['id']) && isset($_POST['Email']) &&
    
 $array=array();
     foreach ($Contr as $key => $value) {
+        if($value['IDProfile']==$_POST['id'])
+               {
+                array_push($array, $value);
+               }
         foreach ($prof as $key1 => $item) {
 
 
