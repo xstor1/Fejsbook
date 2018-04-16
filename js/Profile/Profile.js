@@ -6,6 +6,7 @@ if(viewProfile==null)
     $.post(".//API//GET_PROFILE_BY_ID.php",{id: MyId})
             .done(function(data)
     {
+        console.log('funguje');
         console.log(data);
        let obj = JSON.parse(data);
        console.log(obj);
