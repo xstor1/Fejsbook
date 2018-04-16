@@ -26,8 +26,8 @@ class Database {
         return $this->execute($query, $params)->fetch(PDO::FETCH_ASSOC);
     }
     
-      function delete($query) {
-        $this->execute($query);
+      function delete($query, $data) {
+        $this->execute($query,$data);
     }
     
     function insert($query, $data) {

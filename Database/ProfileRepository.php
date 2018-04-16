@@ -53,6 +53,24 @@ class ProfileRepository {
                     ':id' =>$id
                 ]); 
     }
+    function  liked ($idProfile, $idPost)
+    {
+        $sql='select * from tbLikes where IDContribution= :idpost and IDProfile= :idprofile';
+        return $this->db->selectOne($sql, [':idpost'=>$idPost,':idprofile'=>$idProfile]);   
+        
+    }
+            function LikePost($idProfile, $idPost)
+        {
+            $sql='INSERT INTO tbLikes VALUES (:idPost, :idProfile)';
+            return $this->db->insert($sql, [':idPost'=>$idPost,':idProfile'=>$idProfile]);
+            
+        } 
+         function UnLikePost($idProfile, $idPost)
+        {
+            $sql='DELETE FROM tbLikes WHERE IDContribution= :idpost and IDProfile= :idprofile';
+            return $this->db->delete($sql, [':idpost'=>$idPost,':idprofile'=>$idProfile]);            
+        } 
+    
 function addFriend($id1,$id2)
 {
     $sql ='INSERT INTO tbFriends VALUES(:id1, :id2, 1)';
