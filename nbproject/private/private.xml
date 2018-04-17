@@ -3,11 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/D:/programy/XAMMP/htdocs/Fejsbook/API/GET_ALL_FRIENDS.php</file>
             <file>file:/D:/programy/XAMMP/htdocs/Fejsbook/js/AllProfiles/index.js</file>
+            <file>file:/D:/programy/XAMMP/htdocs/Fejsbook/license.html</file>
             <file>file:/D:/programy/XAMMP/htdocs/Fejsbook/styles.css</file>
             <file>file:/D:/programy/XAMMP/htdocs/Fejsbook/API/GET_ALL_PROFILES.php</file>
             <file>file:/D:/programy/XAMMP/htdocs/Fejsbook/HTMLComponents/Header.php</file>
             <file>file:/D:/programy/XAMMP/htdocs/Fejsbook/js/index.js</file>
+            <file>file:/D:/programy/XAMMP/htdocs/Fejsbook/API/GET_POSTS_BY_PROFILE_ID.php</file>
             <file>file:/D:/programy/XAMMP/htdocs/Fejsbook/Database/ContributionRepository.php</file>
             <file>file:/D:/programy/XAMMP/htdocs/Fejsbook/Database/Contribution.php</file>
             <file>file:/D:/programy/XAMMP/htdocs/Fejsbook/js/Login/index.js</file>
@@ -15,6 +18,7 @@
             <file>file:/D:/programy/XAMMP/htdocs/Fejsbook/API/GET_POST_BY_ID_FROM_FRIENDS.php</file>
             <file>file:/D:/programy/XAMMP/htdocs/Fejsbook/Database/TokenRepository.php</file>
             <file>file:/D:/programy/XAMMP/htdocs/Fejsbook/css/AllProfiles.css</file>
+            <file>file:/D:/programy/XAMMP/htdocs/Fejsbook/API/Like_IDProfile_IDPost.php</file>
             <file>file:/D:/programy/XAMMP/htdocs/Fejsbook/test.php</file>
             <file>file:/D:/programy/XAMMP/htdocs/Fejsbook/Registrate.html</file>
             <file>file:/D:/programy/XAMMP/htdocs/Fejsbook/API/Login.php</file>
@@ -23,11 +27,15 @@
             <file>file:/D:/programy/XAMMP/htdocs/Fejsbook/API/Registration.php</file>
             <file>file:/D:/programy/XAMMP/htdocs/Fejsbook/HTMLComponents/MainBody.php</file>
             <file>file:/D:/programy/XAMMP/htdocs/Fejsbook/Login.html</file>
+            <file>file:/D:/programy/XAMMP/htdocs/Fejsbook/API/isLiked.php</file>
+            <file>file:/D:/programy/XAMMP/htdocs/Fejsbook/js/Redirect/Redirect.js</file>
+            <file>file:/D:/programy/XAMMP/htdocs/Fejsbook/API/UnLike_IDProfile_IDPost.php</file>
             <file>file:/D:/programy/XAMMP/htdocs/Fejsbook/index.html</file>
             <file>file:/D:/programy/XAMMP/htdocs/Fejsbook/AllProfiles.html</file>
             <file>file:/D:/programy/XAMMP/htdocs/Fejsbook/Profile.html</file>
             <file>file:/D:/programy/XAMMP/htdocs/Fejsbook/API/GET_PROFILE_BY_ID.php</file>
             <file>file:/D:/programy/XAMMP/htdocs/Fejsbook/js/Profile/Profile.js</file>
+            <file>file:/D:/programy/XAMMP/htdocs/Fejsbook/js/bootstrap.js</file>
             <file>file:/D:/programy/XAMMP/htdocs/Fejsbook/HTMLComponents/HeadScript.php</file>
             <file>file:/D:/programy/XAMMP/htdocs/Fejsbook/Database/Profile.php</file>
             <file>file:/D:/programy/XAMMP/htdocs/Fejsbook/Database/Database.php</file>

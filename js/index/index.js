@@ -2,6 +2,7 @@ let MyId = sessionStorage.getItem("Myid");
 let MyEmail = sessionStorage.getItem("MyEmail");
 let MyToken = sessionStorage.getItem("token");
 var liket;
+var count;
 
 function like(id)
 {
@@ -52,12 +53,15 @@ $.post(".//API//GET_POST_BY_ID_FROM_FRIENDS.php", {id: MyId, Email: MyEmail, Tok
                 $.ajax({type:'POST',url:".//API//isLiked.php", data:{id: MyId, Email: MyEmail, Token: MyToken, device_id: 'WEB', idpost: obj[i].ID},async:false})
                         .done(function (likes)
                         {
-
                             liket = likes;
-
-
                         });
-              
+               $.ajax({type:'POST',url:".//API//LIKED_POST_BY_IDPROFILE_IDPOST.php", data:{id: MyId, Email: MyEmail, Token: MyToken, device_id: 'WEB', idpost: obj[i].ID},async:false})
+                        .done(function (likedcon)
+                        {
+                            let obj = JSON.parse(likedcon);
+                           count=obj.length;
+                           console.log(count);
+                        });
                 let main = document.getElementById('page-content');
                 let colmd9 = document.createElement('div');
                 colmd9.classList.add('post-preview');
@@ -75,11 +79,11 @@ $.post(".//API//GET_POST_BY_ID_FROM_FRIENDS.php", {id: MyId, Email: MyEmail, Tok
                 if (liket == 'true')
                 {
                     console.log('true probehlo');
-                    meta.innerHTML = "<i style='color:red;' like='true' id='" + obj[i].ID + "' onclick='like(" + obj[i].ID + ");' class='fa fa-thumbs-up fa-2x'></i>    Posted by <a href='#' onclick='Profile(" + obj[i].IDProfile + ")'>" + obj[i].Name + " " + obj[i].Surname + "</a> on " + obj[i].Date;
+                    meta.innerHTML = "<i style='color:red;'  data-badge='"+count+"' like='true' id='" + obj[i].ID + "' onclick='like(" + obj[i].ID + ");' class='fa fa-thumbs-up fa-2x material-icons mdl-badge mdl-badge--overlap'></i>    Posted by <a href='#' onclick='Profile(" + obj[i].IDProfile + ")'>" + obj[i].Name + " " + obj[i].Surname + "</a> on " + obj[i].Date;
 
                 } else
                 {
-                    meta.innerHTML = "<i style='color:black;' like='false' id='" + obj[i].ID + "' onclick='like(" + obj[i].ID + ");' class='fa fa-thumbs-up fa-2x'></i>    Posted by <a href='#' onclick='Profile(" + obj[i].IDProfile + ")'>" + obj[i].Name + " " + obj[i].Surname + "</a> on " + obj[i].Date;
+                    meta.innerHTML = "<i style='color:black;' data-badge='"+count+"' like='false' id='" + obj[i].ID + "' onclick='like(" + obj[i].ID + ");' class='fa fa-thumbs-up fa-2x material-icons mdl-badge mdl-badge--overlap'></i>    Posted by <a href='#' onclick='Profile(" + obj[i].IDProfile + ")'>" + obj[i].Name + " " + obj[i].Surname + "</a> on " + obj[i].Date;
 
 
                 }
