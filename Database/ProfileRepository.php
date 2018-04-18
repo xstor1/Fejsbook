@@ -55,7 +55,7 @@ class ProfileRepository {
     }
     function AllLikes($idpost)
     {
-        $sql='select * from tbLikes where IDContribution=:idpost';
+        $sql='select * from tbLikes t inner join tbProfiles p on t.IDProfile=p.ID where IDContribution=:idpost';
        return $this->db->selectAll($sql, [':idpost'=>$idpost]);  
     }
     function  liked ($idProfile, $idPost)
