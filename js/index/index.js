@@ -3,6 +3,33 @@ let MyEmail = sessionStorage.getItem("MyEmail");
 let MyToken = sessionStorage.getItem("token");
 var liket;
 var count;
+let btn = document.querySelector('#accept');
+ let main = document.getElementById('page-content');
+
+
+btn.addEventListener('click',send);
+function wait(ms){
+   var start = new Date().getTime();
+   var end = start;
+   while(end < start + ms) {
+     end = new Date().getTime();
+  }
+}
+function send()
+{
+    
+    
+    console.log('send');
+    
+    let titlee = document.querySelector('#title');
+    let texte = document.querySelector('#text');
+     $.ajax({type: 'POST', url: ".//API//ADD_POST.php", data: {id: MyId, Email: MyEmail, Token: MyToken, device_id: 'WEB', title: titlee.value, text: texte.value},async: false});
+     titlee.value='';
+    texte.value='';
+
+    console.log('¨7vterin');
+    start();
+}
 function close()
 { let body = document.querySelector('header');
     let dialog = document.querySelector('dialog');
@@ -88,7 +115,9 @@ function mymax(a)
 }
 
 
-
+function start()
+{ var main = document.getElementById('page-content');
+     
 $.ajaxSetup({async: true});
 $.post(".//API//GET_POST_BY_ID_FROM_FRIENDS.php", {id: MyId, Email: MyEmail, Token: MyToken, device_id: 'WEB'})
         .done(function (data)
@@ -97,6 +126,7 @@ $.post(".//API//GET_POST_BY_ID_FROM_FRIENDS.php", {id: MyId, Email: MyEmail, Tok
 
             console.log(data);
             let obj = JSON.parse(data);
+            main.innerHTML=" ";
             for (i = 0; i < obj.length; i++)
             {
 
@@ -113,7 +143,7 @@ $.post(".//API//GET_POST_BY_ID_FROM_FRIENDS.php", {id: MyId, Email: MyEmail, Tok
                             count = obj.length;
                             console.log(count);
                         });
-                let main = document.getElementById('page-content');
+               
                 let colmd9 = document.createElement('div');
                 colmd9.classList.add('post-preview');
                 let mdlcard = document.createElement('h3');
@@ -154,4 +184,5 @@ $.post(".//API//GET_POST_BY_ID_FROM_FRIENDS.php", {id: MyId, Email: MyEmail, Tok
              }*/
         });
 
-    
+}
+start();

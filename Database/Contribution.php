@@ -8,11 +8,11 @@ class Contribution {
     public $Title;
     public $Date;
     public $Text;
-    function __construct($id,$IDProfile, $tittle,  $Data, $Text) {
-        $this->ID = $id;
+    function __construct($IDProfile, $tittle,  $Text) {
+        
         $this->IDProfile = $IDProfile;
         $this->Title = $tittle;
-        $this->Date = $Data;
+        $this->Date = date("Y-m-d H:i:s");
         $this->Text = $Text;
     }
 
